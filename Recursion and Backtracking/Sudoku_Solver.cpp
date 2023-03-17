@@ -3,7 +3,7 @@ public:
     
     bool isValid(vector<vector<char>>& v,char ch,int row,int col){
             for(int i=0;i<9;i++){
-            if(v[i][col]==ch || v[row][i]==ch || v[3*(row/3)+(i/3)][3*(col/3) +(i%3)]==ch){ // Cheking in that row + column + sub-boxes
+            if(v[i][col]==ch || v[row][i]==ch || v[3*(row/3)+(i/3)][3*(col/3) +(i%3)]==ch){ // Checking in that row + column + sub-boxes
                 return false;
             }
         }
