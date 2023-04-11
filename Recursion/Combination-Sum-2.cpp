@@ -5,7 +5,7 @@ public:
         if(target==0){
             ans.push_back(v); // No base case required, only when target is zero push it in the list
         }
-      
+        
         for(int i=index;i<arr.size();i++){
             if(i!=index && arr[i]==arr[i-1]){
                 continue; // skipping same numbers, except the index itself 
