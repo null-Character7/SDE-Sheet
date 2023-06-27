@@ -21,13 +21,13 @@ vector<int> solve(vector<int> &a, vector<int> &b, int k) {
         ans.push_back(x);
 
         // Taking corner from upside
-        if(u>0 && d>0 && s.find({u-1,d})==s.end()){ // Cheking if this already exists in the priority queue or not, so that there is no copy
+        if(u>0 && d>=0 && s.find({u-1,d})==s.end()){ // Cheking if this already exists in the priority queue or not, so that there is no copy
             pq.push({a[u-1]+b[d],{u-1,d}});
             s.insert({u-1,d}); // Marking this pair as done
         }
 
         // Taking corner from downside 
-        if(u>0 && d>0 && s.find({u,d-1})==s.end()){  // Cheking if this already exists in the priority queue or not, so that there is no copy
+        if(u>=0 && d>0 && s.find({u,d-1})==s.end()){  // Cheking if this already exists in the priority queue or not, so that there is no copy
             pq.push({a[u]+b[d-1],{u,d-1}});
             s.insert({u,d-1}); // Marking this pair as done
         }
